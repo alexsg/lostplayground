@@ -139,8 +139,11 @@ void loop(){
     //XData = xl.SPIreadTwoRegisters(0x0E);
     YData = xl.SPIreadTwoRegisters(0x10);
     if(YData < 0) { // RIGHT NOW TO READ PROPERLY CIRCUIT MUST BE KEPT UPRIGHT AND SWAYED LEFT TO RIGHT
+      //justchanged = false;
+      //neg = true;
       digitalWrite(ledRed, LOW);
       digitalWrite(ledYellow, HIGH);
+      //justchanged=true;
     } else {
       digitalWrite(ledYellow, LOW);
       digitalWrite(ledRed, HIGH);
